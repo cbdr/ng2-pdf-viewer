@@ -1,9 +1,0 @@
-{
-  "name": "ng2-pdf-viewer",
-  "peerDependencies": {
-    "@angular/common": "*",
-    "@angular/core": "*"
-  },
-  "main": "index.js",
-  "module": "index.js"
-}

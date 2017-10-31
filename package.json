@@ -1,75 +1,31 @@
 {
-  "name": "ng2-pdf-viewer",
-  "version": "1.2.5",
-  "description": "Angular2+ component for rendering PDF",
-  "main": "dist/index.js",
-  "typings": "./dist/index.d.ts",
-  "directories": {
-    "example": "example"
-  },
-  "scripts": {
-    "clean": "rimraf build",
-    "build": "ngm build -p src --clean --skip-bundles",
-    "link": "ngm link -p src"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://vadimdez@github.com/VadimDez/ng2-pdf-viewer.git"
-  },
-  "keywords": [
-    "angular",
-    "pdf",
-    "angular2",
-    "angular-pdf",
-    "angular2-pdf",
-    "ng2",
-    "ng2-pdf"
-  ],
-  "author": "Vadym Yatsyuk <vadym.yatsyuk@gmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/VadimDez/ng2-pdf-viewer/issues"
-  },
-  "homepage": "https://github.com/VadimDez/ng2-pdf-viewer#readme",
-  "peerDependencies": {
-    "@angular/core": ">=2.2.1",
-    "pdfjs-dist": "^1.9.524"
-  },
-  "dependencies": {
-    "@types/pdf": "0.0.31",
-    "pdfjs-dist": "1.10.93"
-  },
-  "devDependencies": {
-    "ngm-cli": "0.8.3",
-    "rimraf": "2.6.2",
-    "@angular/animations": "4.4.3",
-    "@angular/common": "4.4.3",
-    "@angular/compiler": "4.4.3",
-    "@angular/compiler-cli": "4.4.3",
-    "@angular/core": "4.4.3",
-    "@angular/forms": "4.4.3",
-    "@angular/platform-browser": "4.4.3",
-    "@angular/platform-browser-dynamic": "4.4.3",
-    "@angular/platform-server": "4.4.3",
-    "@types/jasmine": "2.5.53",
-    "@types/node": "^7.0.14",
-    "@types/pdf": "^0.0.31",
-    "codelyzer": "3.2.1",
-    "concurrently": "^3.4.0",
-    "ember-cli-inject-live-reload": "^1.6.1",
-    "es6-shim": "^0.35.3",
-    "material-design-lite": "^1.3.0",
-    "moment": "^2.18.1",
-    "reflect-metadata": "^0.1.10",
-    "rxjs": "^5.3.0",
-    "ts-node": "3.3.0",
-    "tslint": "5.7.0",
-    "typescript": "2.4.2",
-    "typings": "^2.1.1",
-    "uglifyjs": "^2.4.10",
-    "zone.js": "0.8.16"
-  },
-  "files": [
-    "dist"
-  ]
+	"main": "index.js",
+	"version": "1.2.5",
+	"description": "Angular2+ component for rendering PDF",
+	"typings": "./dist/index.d.ts",
+	"keywords": [
+		"angular",
+		"pdf",
+		"angular2",
+		"angular-pdf",
+		"angular2-pdf",
+		"ng2",
+		"ng2-pdf"
+	],
+	"author": {
+		"name": "Vadym Yatsyuk",
+		"email": "vadym.yatsyuk@gmail.com"
+	},
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://vadimdez@github.com/VadimDez/ng2-pdf-viewer.git"
+	},
+	"name": "ng2-pdf-viewer",
+	"peerDependencies": {
+		"@angular/common": "4.4.3",
+		"@angular/core": ">=2.2.1"
+	},
+	"module": "index.js",
+	"_id": "ng2-pdf-viewer@"
 }
