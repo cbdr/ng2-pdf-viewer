@@ -1,5 +1,5 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var pdf_viewer_component_1 = require("./pdf-viewer.component");
-exports.PdfViewerComponent = pdf_viewer_component_1.PdfViewerComponent;
+/**
+ * Created by vadimdez on 01/11/2016.
+ */
+export { PdfViewerComponent } from './pdf-viewer.component';
 //# sourceMappingURL=index.js.map

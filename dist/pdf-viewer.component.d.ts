@@ -1,6 +1,8 @@
 /// <reference types="pdf" />
+/**
+ * Created by vadimdez on 21/06/16.
+ */
 import { ElementRef, EventEmitter, OnChanges, SimpleChanges } from '@angular/core';
-import 'pdfjs-dist/build/pdf';
 export declare class PdfViewerComponent implements OnChanges {
     private element;
     private _showAll;
@@ -11,6 +13,7 @@ export declare class PdfViewerComponent implements OnChanges {
     private _zoom;
     private _rotation;
     private resizeTimeout;
+    private pdfjsPromise;
     afterLoadComplete: EventEmitter<PDFDocumentProxy>;
     onError: EventEmitter<any>;
     onProgress: EventEmitter<PDFProgressData>;
