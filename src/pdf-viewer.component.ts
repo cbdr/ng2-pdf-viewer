@@ -40,10 +40,11 @@ export class PdfViewerComponent implements OnChanges {
   @Output('on-progress') onProgress = new EventEmitter<PDFProgressData>();
 
   constructor(private element: ElementRef) {
+    const version  = '2.0.108';
     this.pdfjsPromise = import(/* webpackChunkName: "pdfjs" */ 'pdfjs-dist/build/pdf').then(pdfjsGlobal => {
       const pdfjs = pdfjsGlobal.PDFJS;
       pdfjs.verbosity = (<any>pdfjs).VERBOSITY_LEVELS.errors;
-      pdfjs.workerSrc = 'https://mozilla.github.io/pdf.js/build/pdf.worker.js';
+      pdfjs.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${version}/pdf.worker.min.js`;
       return Promise.resolve(pdfjs);
     });
   }

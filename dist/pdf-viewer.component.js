@@ -18,10 +18,11 @@ var PdfViewerComponent = (function () {
         this.onError = new EventEmitter();
         this.onProgress = new EventEmitter();
         this.pageChange = new EventEmitter(true);
+        var version = '2.0.108';
         this.pdfjsPromise = import(/* webpackChunkName: "pdfjs" */ 'pdfjs-dist/build/pdf').then(function (pdfjsGlobal) {
             var pdfjs = pdfjsGlobal.PDFJS;
             pdfjs.verbosity = pdfjs.VERBOSITY_LEVELS.errors;
-            pdfjs.workerSrc = 'https://mozilla.github.io/pdf.js/build/pdf.worker.js';
+            pdfjs.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/" + version + "/pdf.worker.min.js";
             return Promise.resolve(pdfjs);
         });
     }
