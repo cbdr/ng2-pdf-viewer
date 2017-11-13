@@ -18,10 +18,11 @@ var PdfViewerComponent = (function () {
         this.onError = new EventEmitter();
         this.onProgress = new EventEmitter();
         this.pageChange = new EventEmitter(true);
+        var version = '2.0.108';
         this.pdfjsPromise = import(/* webpackChunkName: "pdfjs" */ 'pdfjs-dist/build/pdf').then(function (pdfjsGlobal) {
             var pdfjs = pdfjsGlobal.PDFJS;
             pdfjs.verbosity = pdfjs.VERBOSITY_LEVELS.errors;
-            pdfjs.workerSrc = 'https://mozilla.github.io/pdf.js/build/pdf.worker.js';
+            pdfjs.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/" + version + "/pdf.worker.min.js";
             return Promise.resolve(pdfjs);
         });
     }
@@ -148,12 +149,12 @@ var PdfViewerComponent = (function () {
             };
             ((loadingTask.promise))
                 .then(function (pdf) {
-                _this._pdf = pdf;
-                _this.afterLoadComplete.emit(pdf);
-                _this.update();
-            }, function (error) {
-                _this.onError.emit(error);
-            });
+                    _this._pdf = pdf;
+                    _this.afterLoadComplete.emit(pdf);
+                    _this.update();
+                }, function (error) {
+                    _this.onError.emit(error);
+                });
         });
     };
     /**
@@ -240,10 +241,10 @@ var PdfViewerComponent = (function () {
     };
     PdfViewerComponent.decorators = [
         { type: Component, args: [{
-                    selector: 'pdf-viewer',
-                    template: "\n    <div class=\"ng2-pdf-viewer-container\"\n       [ngClass]=\"{'ng2-pdf-viewer--zoom': zoom < 1}\"\n       (window:resize)=\"onPageResize()\"\n    ></div>\n  ",
-                    styles: ["\n    .ng2-pdf-viewer--zoom {\n      overflow-x: scroll;\n    }\n    \n    :host >>> .ng2-pdf-viewer-container .page {\n      background-color: #fff;\n    }\n  "]
-                },] },
+                selector: 'pdf-viewer',
+                template: "\n    <div class=\"ng2-pdf-viewer-container\"\n       [ngClass]=\"{'ng2-pdf-viewer--zoom': zoom < 1}\"\n       (window:resize)=\"onPageResize()\"\n    ></div>\n  ",
+                styles: ["\n    .ng2-pdf-viewer--zoom {\n      overflow-x: scroll;\n    }\n    \n    :host >>> .ng2-pdf-viewer-container .page {\n      background-color: #fff;\n    }\n  "]
+            },] },
     ];
     /**
      * @nocollapse
